@@ -8,30 +8,36 @@
 </head>
 <body>
     
-<div class="container">
+<div id="container">
     <!-- aqui empieza la TV -->
-    <div class="container">
-        <div class="col" id="izquierda">
-            <div class="row" id="power">POWER</div>
-            <div class="row" id="volumen">VOLUMEN</div>
+    <div>
+        <div id="izquierda">
+            <div>
+            <!-- IZQUIERDA -->
+                <div id="c0" class="button">POWER</div>
+                <div">VOLUMEN</div>
             <!-- esto quiero que se deslice de izquierda a derecha para controlar el volumen  -->
-            <div class="row">VOLUMEN2</div>
+                <div>VOLUMEN2</div>
             <!-- imagen altavoz como rendija o puntitos -->
-            <div class="row">ALTAVOZ</div>
-        </div>
-        <div class="col">
-            <div id="pantalla">PANTALLA</div>
-        </div>
-        <div class="col" id="derecha">
-            <div class="row">
-                <div class="row" id="boton1">1</div>
-                <div class="row" id="boton2">2</div>
-                <div class="row" id="boton3">3</div>
-                <div class="row" id="boton4">4</div>
-                <div class="row" id="boton5">5</div>
+                <div>ALTAVOZ</div>
             </div>
+        </div>
+        <div id="centro">
+            <!-- PANTALLA -->
+            <div id="screen" class="basicScreen"></div>
+        </div>
+        <!-- DERECHA -->
+        <div id="derecha">
+            
+                <!-- BOTONONES CANALES -->
+                <div id="c1" class="button"></div>
+                <div id="c2" class="button"></div>
+                <div id="c3" class="button"></div>
+                <div id="c4" class="button"></div>
+                <div id="c5" class="button"></div>
+            
             <!-- imagen altavoz como rendija o puntitos -->
-            <div class="row">ALTAVOZ</div>
+            <div>ALTAVOZ</div>
         </div>
     </div>
 </div>

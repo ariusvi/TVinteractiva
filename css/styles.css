@@ -1,25 +1,97 @@
-body {
-    margin: 0em;
+body{
+    margin: 0;
     padding: 0;
   
-    min-height: 100vh;
-    min-width: 95vw;
-}
-
-.container{
+    height: 100vh;
+    width: 100vw;
+  
+    background-color: beige;
+  
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: brown;
-    border-color: red;
-    border-width: 0.5em;
-    border-style: dashed;
 }
 
-.col{
+#container {
+
+    height: 40em;
+    width: 75em;
+
+    background-color: grey;
+    border-radius: 0.4em;
+
+    border: 0.2em solid black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen {
+
+    height: 25em;
+    width: 40em;
+
+    border-radius: 0.4em;
+}
+
+.basicScreen {
+    background-color: black;
+} 
+
+
+#izquierda{
+    height: 25em;
+    border: 0.2em solid rgb(255, 0, 0);
+}
+
+#centro{
+    border: 0.2em solid rgb(22, 154, 255);
+}
+
+#derecha{
+    height: 25em;
+    border: 0.2em solid rgb(255, 128, 0);
+}
+
+.button {
+
+    height: 2em;
+    width: 10em; 
+    border-radius: 5%;
+
+    background-color: red;
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.button:hover{
+    transition: 0.2s;
+    background-color: darkred;
+}
+
+.canal1 {
     background-color: aqua;
-    border-color: yellow;
-    border-width: 0.5em;
-    border-style: dotted;
 }
+
+.canal2 {
+    background-color: purple;
+}
+
+.canal3 {
+    background-color: greenyellow;
+}
+
+.canal4 {
+    background-color: gold;
+}
+
+.canal5 {
+    background-color: magenta;
+}
+
