@@ -8,39 +8,28 @@
 </head>
 <body>
     
-<div id="container">
-    <!-- aqui empieza la TV -->
-    <div>
-        <div id="izquierda">
-            <div>
-            <!-- IZQUIERDA -->
-                <div id="c0" class="button">POWER</div>
-                <div">VOLUMEN</div>
-            <!-- esto quiero que se deslice de izquierda a derecha para controlar el volumen  -->
-                <div>VOLUMEN2</div>
-            <!-- imagen altavoz como rendija o puntitos -->
-                <div>ALTAVOZ</div>
+    <div id="container">    
+        <div id="screen" class="basicScreen"></div>
+        <div id="remote">
+            <div id="power" class="btnPower">ON/OFF</div>
+            <div id="channels">
+                <div class="chn">
+                    <div id="c1" class="button">1</div>
+                    <div id="c2" class="button">2</div>
+                </div>
+                <div class="chn">
+                    <div id="c3" class="button">3</div>
+                    <div id="c4" class="button">4</div>
+                </div>
+            </div>
+            <div id="info">
+                <div id="infoChannelScreen"></div>
+                <div id="infoChannel"></div>
+                <div id="infoDay"></div>
+                <div id="infoTime"></div>
             </div>
         </div>
-        <div id="centro">
-            <!-- PANTALLA -->
-            <div id="screen" class="basicScreen"></div>
-        </div>
-        <!-- DERECHA -->
-        <div id="derecha">
-            
-                <!-- BOTONONES CANALES -->
-                <div id="c1" class="button"></div>
-                <div id="c2" class="button"></div>
-                <div id="c3" class="button"></div>
-                <div id="c4" class="button"></div>
-                <div id="c5" class="button"></div>
-            
-            <!-- imagen altavoz como rendija o puntitos -->
-            <div>ALTAVOZ</div>
-        </div>
     </div>
-</div>
 
     <script src="./js/main.js"></script>
 </body>

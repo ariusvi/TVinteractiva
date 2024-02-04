@@ -1,23 +1,22 @@
-body{
+body {
     margin: 0;
     padding: 0;
-  
+
     height: 100vh;
     width: 100vw;
-  
-    background-color: beige;
-  
+
+    background-color: rgb(41, 41, 41);
+
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #container {
-
     height: 40em;
     width: 75em;
 
-    background-color: grey;
+    background-color:aliceblue;
     border-radius: 0.4em;
 
     border: 0.2em solid black;
@@ -33,32 +32,80 @@ body{
     width: 40em;
 
     border-radius: 0.4em;
+    border: 0.5em solid black;
+
 }
 
 .basicScreen {
     background-color: black;
-} 
-
-
-#izquierda{
-    height: 25em;
-    border: 0.2em solid rgb(255, 0, 0);
 }
 
-#centro{
-    border: 0.2em solid rgb(22, 154, 255);
+#remote {
+
+    height: 25em;
+    width: 10em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 0.5em;
+
+    background-color: grey;
+    border: 0.2em solid black;
+
+    margin-left: 10em;
 }
 
-#derecha{
-    height: 25em;
-    border: 0.2em solid rgb(255, 128, 0);
+.btnPower{
+    height: 2em;
+    width: 8em;
+    border-radius: 10%;
+
+    background-color: rgb(58, 58, 58);
+
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btnPower:hover{
+    transition: 0.2s;
+    background-color: green;
+}
+
+
+#channels {
+
+    height: 10em;
+    width: 8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border: 0.1em solid red;
+
+}
+
+.chn {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .button {
 
-    height: 2em;
-    width: 10em; 
-    border-radius: 5%;
+    height: 4em;
+    width: 4em; 
+    border-radius: 25%;
 
     background-color: red;
 
@@ -91,7 +138,30 @@ body{
     background-color: gold;
 }
 
-.canal5 {
-    background-color: magenta;
+#info {
+
+    height: 8em;
+    width: 8em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    border-radius: 0.5em;
+
+    background-color: black;
 }
 
+
+#infoChannelScreen, #infoChannel, #infoDay, #infoTime {
+
+    position: absolute; 
+    z-index: 150;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    font-size: smaller;
+    color: gray;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} 
