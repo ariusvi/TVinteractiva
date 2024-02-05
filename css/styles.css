@@ -187,6 +187,13 @@ body {
 }
 
 .channel4 {
+    background-image: url("../img/friends2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.channel0 {
     background-image: url("../img/tvstaticglitch.gif");
     background-repeat: repeat;
     
