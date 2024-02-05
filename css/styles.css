@@ -10,16 +10,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-family: serif;
 }
 
 #container {
-    height: 40em;
-    width: 75em;
+    /* height: 40em;
+    width: 90em; */
 
-    background-color:aliceblue;
+    /* background-color:aliceblue; */
     border-radius: 0.4em;
 
-    border: 0.2em solid black;
+    /* border: 0.2em solid black; */
 
     display: flex;
     justify-content: center;
@@ -28,8 +30,8 @@ body {
 
 #screen {
 
-    height: 25em;
-    width: 40em;
+    height: 40em;
+    width: 70em;
 
     border-radius: 0.4em;
     border: 0.5em solid black;
@@ -50,7 +52,7 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    border-radius: 0.5em;
+    border-radius: 4em;
 
     background-color: grey;
     border: 0.2em solid black;
@@ -60,10 +62,10 @@ body {
 
 .btnPower{
     height: 2em;
-    width: 8em;
-    border-radius: 10%;
+    width: 6em;
+    border-radius: 15%;
 
-    background-color: rgb(58, 58, 58);
+    background-color: darkred;
 
     color: white;
     display: flex;
@@ -89,7 +91,6 @@ body {
     justify-content: space-around;
     align-items: center;
 
-    border: 0.1em solid red;
 
 }
 
@@ -101,13 +102,21 @@ body {
 
 }
 
+.volume {    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 .button {
 
-    height: 4em;
-    width: 4em; 
+    height: 2.5em;
+    width: 2.5em; 
     border-radius: 25%;
 
-    background-color: red;
+    background-color: rgb(78, 78, 78);
 
     color: white;
     display: flex;
@@ -117,30 +126,18 @@ body {
     transition: 0.2s;
 }
 
+.oculto {
+    visibility: hidden;
+}
+
 .button:hover{
     transition: 0.2s;
-    background-color: darkred;
-}
-
-.canal1 {
-    background-color: aqua;
-}
-
-.canal2 {
-    background-color: purple;
-}
-
-.canal3 {
-    background-color: greenyellow;
-}
-
-.canal4 {
-    background-color: gold;
+    background-color: rgb(173, 173, 173);
 }
 
 #info {
 
-    height: 8em;
+    height: 6em;
     width: 8em;
 
     display: flex;
@@ -151,17 +148,47 @@ body {
     border-radius: 0.5em;
 
     background-color: black;
+
+    color: white;
+
+    text-shadow: 0.5em;
 }
 
 
-#infoChannelScreen, #infoChannel, #infoDay, #infoTime {
+.powerOff {
+    background: black;
+}
 
-    position: absolute; 
-    z-index: 150;
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
-    font-size: smaller;
-    color: gray;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-} 
+.start {
+    background-color: darkolivegreen;
+}
+
+
+.channel1 {
+    background-image: url("../img/caballeros_zodiaco.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+}
+
+.channel2 {
+    background-image: url("../img/upa.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.channel3 {
+    background-image: url("../img/sietevidas.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.channel4 {
+    background-image: url("../img/tvstaticglitch.gif");
+    background-repeat: repeat;
+    
+    background-size: contain;
+}
