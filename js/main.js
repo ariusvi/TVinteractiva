@@ -1,5 +1,7 @@
 let screen = document.getElementById("screen");
 
+/* hora y fecha actual */
+
 setInterval(hora, 1000);
 
 function hora() {
@@ -12,6 +14,9 @@ function hora() {
         document.getElementById("hora").innerHTML = time;
         document.getElementById("fecha").innerHTML = date;
 }
+
+
+/* botón ON/OFF */
 
 const screenHeader = document.getElementById("screenHeader");
 
@@ -44,6 +49,8 @@ function toggle() {
 
 
 }
+
+/* Botones Canales */
 
 buttonNumbers();
 
