@@ -30,8 +30,8 @@ body {
 
 #screen {
 
-    height: 40em;
-    width: 70em;
+    height: 30em;
+    width: 60em;
 
     border-radius: 0.4em;
     border: 0.5em solid black;
@@ -165,29 +165,28 @@ body {
 
 
 .channel1 {
-    background-image: url("../img/caballeros_zodiaco.png");
+    background-image: url("../img/snk.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
-    background-position: center;
 }
 
 .channel2 {
-    background-image: url("../img/upa.jpg");
+    background-image: url("../img/anhqv.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: contain; 
 }
 
 .channel3 {
-    background-image: url("../img/sietevidas.jpg");
+    background-image: url("../img/gura.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
 }
 
 .channel4 {
-    background-image: url("../img/friends2.jpg");
+    background-image: url("../img/friends.gif");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;

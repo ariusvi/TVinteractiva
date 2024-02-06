@@ -8,13 +8,10 @@ function hora() {
         const date = new Date().toLocaleDateString();
         let hora = new Date().getHours();
         let minutos = new Date().getMinutes();
-        let segundos = new Date().getSeconds();
-        const time = `${hora}:${minutos < 10 ? "0" : ""}${minutos}:${segundos < 10 ? "0" : ""
-                }${segundos}`;
+        const time = `${hora}:${minutos}`;
         document.getElementById("hora").innerHTML = time;
         document.getElementById("fecha").innerHTML = date;
 }
-
 
 /* botón ON/OFF */
 
@@ -36,18 +33,16 @@ function toggle() {
         screenHeader.hidden = !screenHeader.hidden;
         console.log(powerOn);
 
-	if (screenHeader.hidden) {
-        	console.log("apagado");
-        	screen.classList = [];
-        	screen.classList.add("powerOff");
-	} else {
-        	console.log("encendido");
-        	console.log("encendido");
-        	screen.classList = [];
-        	screen.classList.add("channel0");
-	}
-
-
+        if (screenHeader.hidden) {
+                console.log("apagado");
+                screen.classList = [];
+                screen.classList.add("powerOff");
+        } else {
+                console.log("encendido");
+                console.log("encendido");
+                screen.classList = [];
+                screen.classList.add("channel0");
+        }
 }
 
 /* Botones Canales */
@@ -81,28 +76,6 @@ function channelButtons() {
         const channelButton = document.getElementsByClassName("channel");
         console.log(channelButton[0]);
         channelButton[0].addEventListener("click", (evento) => {
-                evento.target.innerHTML === "P +"
-                        ? (channel(),
-                                contChannel++,
-                                screen.classList.add(`channel${contChannel}`),
-                                (document.getElementById(
-                                        "channelInfo"
-                                ).innerHTML = `Channel ${contChannel}`))
-                        : (channel(),
-                                contChannel--,
-                                contChannel < 0
-                                        ? (console.log("es canal 0"),
-                                                console.log(screen.classList),
-                                                (contChannel = 9),
-                                                (document.getElementById(
-                                                        "channelInfo"
-                                                ).innerHTML = `channel ${contChannel}`),
-                                                screen.classList.add(`Channel${contChannel}`))
-                                        : screen.classList.add(`Channel${contChannel}`),
-                                (document.getElementById(
-                                        "channelInfo"
-                                ).innerHTML = `channel ${contChannel}`));
-
                 function channel() {
                         console.log(screen.classList[0]),
                                 (contChannel = screen.classList[0].substring(
@@ -114,4 +87,5 @@ function channelButtons() {
                         }
                 }
         });
+        // document.getElementById("channelInfo").innerHTML = contChannel;
 }
