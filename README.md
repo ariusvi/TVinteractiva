@@ -26,9 +26,7 @@ Welcome to the Interactive TV's documentation. This repository simulates a TV wi
 
 ## Things to improve ⚠️
 - **Volume buttons funtionality;** By now, volume buttons doesn't work, they should simulate volume up / volume down.
-- **Channel information:** It doesn't show the name of the actual channel.
-- **Channel video example:** Change the view of a static picture to a video.
-- **Hide date and hour information:** When the TV is off date and hour information should be off.
+- **Channel video example:** Change the view of the simulation from a gif to a video.
 - **Responsive:** Now the project isn't responsive, doesn't work well on mobile dispositives.
 
 ## Live Deployment 🌐

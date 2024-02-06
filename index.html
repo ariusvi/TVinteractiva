@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,45 @@
     <link rel="icon" href="./img/TV_logo.png" type="image/icon type">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
-    
-    <div id="container">   
-        <div id="screen" class="basicScreen"> 
-            <div id="info">
-                <div class="date">
-                    <p id="hora"></p>
-                    <p id="fecha"></p>
-                    <p id="channelInfo"></p>
-            </div> 
-            <div id="screenHeader" hidden="false"></div>
-            </div>
-        </div>
-        <div id="remote">
-            <div id="power" class="btnPower" onclick="togglePower()" >ON/OFF</div>
-            <div id="channels">
-                <div class="chn">
-                    <div class="button numbers ">1</div>
-                    <div class="button oculto"></div>
-                    <div class="button numbers ">2</div>
-                </div>
-                <div class="chn">
-                    <div class="button numbers ">3</div>
-                    <div class="button oculto"></div>
-                    <div class="button numbers ">4</div>
-                </div>
-                <div class="volume">
-                    <div id="vUp" class="button numbers ">V +</div>
-                    <div class="button oculto"></div>
-                    <div id="vDown" class="button numbers ">V -</div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
 
-    <script src="./js/main.js"></script>
+<body>
+
+    <div id="container">
+        <div id="screen" class="basicScreen">
+            <div id="screenFront" hidden="false">
+                <div id="info">
+                    <div class="date">
+                        <p id="hora"></p>
+                        <p id="fecha"></p>
+                        <p id="channelInfo"></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div id="remote">
+                <div id="power" class="btnPower" onclick="togglePower()">ON/OFF</div>
+                <div id="channels">
+                    <div class="chn">
+                        <div class="button numbers ">1</div>
+                        <div class="button oculto"></div>
+                        <div class="button numbers ">2</div>
+                    </div>
+                    <div class="chn">
+                        <div class="button numbers ">3</div>
+                        <div class="button oculto"></div>
+                        <div class="button numbers ">4</div>
+                    </div>
+                    <div class="volume">
+                        <div id="vUp" class="button numbers ">V +</div>
+                        <div class="button oculto"></div>
+                        <div id="vDown" class="button numbers ">V -</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <script src="./js/main.js"></script>
 </body>
+
 </html>

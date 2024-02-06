@@ -8,14 +8,16 @@ function hora() {
         const date = new Date().toLocaleDateString();
         let hora = new Date().getHours();
         let minutos = new Date().getMinutes();
-        const time = `${hora}:${minutos}`;
+        let segundos = new Date().getSeconds();
+        const time = `${hora}:${minutos < 10 ? "0" : ""}${minutos}:${segundos < 10 ? "0" : ""
+                }${segundos}`;
         document.getElementById("hora").innerHTML = time;
         document.getElementById("fecha").innerHTML = date;
 }
 
 /* botón ON/OFF */
 
-const screenHeader = document.getElementById("screenHeader");
+const screenFront = document.getElementById("screenFront");
 
 const power = document.getElementById("power");
 
@@ -28,12 +30,12 @@ power.addEventListener("click", (evento) => {
 
 let powerOn = false;
 function toggle() {
-        let screenHeader = document.getElementById("screenHeader");
+        let screenFront = document.getElementById("screenFront");
         powerOn = !powerOn;
-        screenHeader.hidden = !screenHeader.hidden;
+        screenFront.hidden = !screenFront.hidden;
         console.log(powerOn);
 
-        if (screenHeader.hidden) {
+        if (screenFront.hidden) {
                 console.log("apagado");
                 screen.classList = [];
                 screen.classList.add("powerOff");
