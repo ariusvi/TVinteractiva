@@ -71,13 +71,17 @@ function buttonNumbers() {
         });
 }
 
+
+document.getElementById("channelInfo").innerHTML = contChannel;
+
 let channel;
 let contChannel = 0;
 channelButtons();
 function channelButtons() {
         const channelButton = document.getElementsByClassName("channel");
         console.log(channelButton[0]);
-        channelButton[0].addEventListener("click", (evento) => {
+        // revisar esto, evento no lee nada, la función channel no lee nada
+        channelButton[0].addEventListener("click", (evento) => {  
                 function channel() {
                         console.log(screen.classList[0]),
                                 (contChannel = screen.classList[0].substring(
