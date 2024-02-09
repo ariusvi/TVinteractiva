@@ -3,7 +3,7 @@ let power = false; /* la TV empieza apagada*/
 const onOff = document.getElementById("power"); /* seleccionamos el boton de power*/
 const screen = document.getElementById("screen"); /* seleccionamos la pantalla*/
 const info = document.getElementsByClassName("hidden")[0];
-info.style.visibility = 'hidden';
+// info.style.visibility = 'hidden';
 
 // Función para mostrar la hora y la fecha
 function hora() {
@@ -25,12 +25,15 @@ onOff.addEventListener('click', () => {
         console.log(power); /*ver el estado de power */
         if (power) {
                 screen.classList.add("channel0"); /* cambiar la clase bassicScreen, por una nueva, channel0 - encender*/
-                info.classList.remove("hidden");
-                info.classList.add("visible"); /*cambia la clase "hidden" por "visible"*/
+                info.classList.replace("hidden" , "visible");
+                console.log("patata1"  , info)
+
+                // info.classList.add("visible"); /*cambia la clase "hidden" por "visible"*/
         } else {
                 screen.classList.add("basicScreen"); /*elimina clase screenOn, cambia por bassicScreen - apagar*/
-                info.classList.remove("visible");
-                info.classList.add("hidden"); /* cambia la clase "visible" por "hidden"*/
+                info.classList.replace("visible" , "hidden");
+                // info.classList.add("hidden"); /* cambia la clase "visible" por "hidden"*/
+                console.log("patata" , info)
         }
 });
 
