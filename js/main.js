@@ -11,21 +11,10 @@ let screen = document.getElementById("screen"); /*seleccionamos la pantalla*/
 
 setInterval(hora, 1000);
 
-function hora() {
+function hora(){
 
-    const now = new Date(); /*obtener fecha actual */
-    const date = now.toLocaleDateString();
-    const hora = now.getHours();
-    const minutos = now.getMinutes();
-    const segundos = now.getSeconds();
-
-    const time = `${hora}:${minutos < 10 ? "0" : ""}${minutos}:${segundos < 10 ? "0" : ""}${segundos}`; /*formato hora*/
-
-    document.getElementById("hora").innerHTML = time;
-document.getElementById("fecha").innerHTML = date;
-   
-    document.getElementById("hora").innerHTML = time; /*inserta la hora en el html*/
-    document.getElementById("fecha").innerHTML = date; /*inserta la fecha en el html*/
+        const date = new Date().toLocaleString(); /*obtener fecha y hora actual */
+        document.getElementById("fecha").innerHTML = date; /*inserta la fecha y hora en el html*/
 }
 
 /* botón ON/OFF */
@@ -38,7 +27,7 @@ onOff.addEventListener('click', () => {
         console.log(power); /*ver el estado de power */
         if (power) {
                 screen.classList.remove("basicScreen")
-                screen.classList.add("channel0") /* cambiar la clase bassicScreen, por una nueva, screenOn - encender*/
+                screen.classList.add("channel0") /* cambiar la clase bassicScreen, por una nueva, channel0 - encender*/
 
         } else {
                 screen.classList.remove("channel0")
@@ -52,12 +41,12 @@ const buttons = document.getElementsByClassName("button"); /* Selecciona todos l
 let arrayButtons = Array.from(buttons); /* Crear un array con los elementos de clase buttons*/
 
 arrayButtons.forEach(item => {  /* itera sobre cada elemento y agrega un event listener.*/
-    item.addEventListener("click", (e) => {
-        if (power) { // Verifica si la TV está encendida
-            screen.classList.remove(screen.classList[screen.classList.length - 1]); // Elimina la última clase del elemento con id="screen"
-            screen.classList.add("channel" + e.target.innerHTML); // Añade la clase correspondiente al canal
-        }
-    });
+        item.addEventListener("click", (e) => {
+                if (power) {    /* Verifica si la TV está encendida*/
+                        screen.classList.remove(screen.classList[screen.classList.length - 1]); // Elimina la última clase del elemento con id="screen"
+                        screen.classList.add("channel" + e.target.innerHTML); // Añade la clase correspondiente al canal
+                }
+        });
 });
 
 
@@ -143,3 +132,23 @@ arrayButtons.forEach(item => {  /* itera sobre cada elemento y agrega un event l
 //         });
 //         // document.getElementById("channelInfo").innerHTML = contChannel;
 // }
+
+setInterval(hora, 1000);
+
+function hora(){
+
+        const date = new Date().toLocaleString(); /*obtener fecha actual */
+        // const hora = date.getHours();
+        // const minutos = date.getMinutes();
+        // const segundos = date.getSeconds();
+
+        // const time = `${hora}:${minutos < 10 ? "0" : ""}${minutos}:${segundos < 10 ? "0" : ""}${segundos}`; /*formato hora*/
+
+        // document.getElementById("hora").innerHTML = time;
+        // document.getElementById("fecha").innerHTML = date;
+
+        //console.log(date)
+
+        // document.getElementById("hora").innerHTML = time; /*inserta la hora en el html*/
+        document.getElementById("fecha").innerHTML = date; /*inserta la fecha en el html*/
+}

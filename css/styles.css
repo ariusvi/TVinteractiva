@@ -131,25 +131,6 @@ body {
     background-color: rgb(173, 173, 173);
 }
 
-#info {
-
-    height: 6em;
-    width: 8em;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-    border-radius: 0.5em;
-
-    background:rgba(245, 245, 245, 0.329);
-
-    color: black;
-
-    text-shadow: 0.5em;
-}
-
 
 .powerOff {
     background: black;
@@ -196,3 +177,35 @@ body {
     
     background-size: contain;
 }
+
+#screenFront {
+    /* height: 6em;
+    width: 8em; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:none;
+
+}
+
+
+#info {
+
+    height: 4em;
+    width: 8em;
+
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 0.5em;
+
+    background:rgba(245, 245, 245, 0.329);
+
+    color: rgb(0, 0, 0);
+
+    text-shadow: 0.5em;
+} 
