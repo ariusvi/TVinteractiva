@@ -209,3 +209,11 @@ body {
 
     text-shadow: 0.5em;
 } 
+
+.hidden {
+    display:none;
+}
+
+.visible {
+    display: block; 
+}

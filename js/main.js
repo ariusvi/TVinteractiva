@@ -1,53 +1,53 @@
-//valores iniciales
+// Valores iniciales
 let power = false; /* la TV empieza apagada*/
-let onOff = document.getElementById("power"); /*seleccionamos el boton de power*/
-let screen = document.getElementById("screen"); /*seleccionamos la pantalla*/
+const onOff = document.getElementById("power"); /* seleccionamos el boton de power*/
+const screen = document.getElementById("screen"); /* seleccionamos la pantalla*/
+const info = document.getElementsByClassName("hidden")[0];
+info.style.visibility = 'hidden';
 
-
-// let screen = document.getElementById("screen");
-
-// /* hora y fecha actual */
-
-
-setInterval(hora, 1000);
-
-function hora(){
-
+// Función para mostrar la hora y la fecha
+function hora() {
         const date = new Date().toLocaleString(); /*obtener fecha y hora actual */
         document.getElementById("fecha").innerHTML = date; /*inserta la fecha y hora en el html*/
 }
 
-/* botón ON/OFF */
+setInterval(hora, 1000); /*Actualizar la hora y la fecha cada segundo*/
 
+/* Evento de clic en el botón de encendido/apagado */
 onOff.addEventListener('click', () => {
+        // Verificar si la pantalla tiene clases antes de eliminarlas
+        if (screen.classList.length > 0) {
+                screen.classList.remove(screen.classList[screen.classList.length - 1]); /* eliminar la última clase del elemento con id="screen", para empezar limpio */
+        }
 
-        screen.classList.remove(screen.classList[screen.classList.length - 1]) /* eliminar las clases de id="screen", para empezar limpio*/
         power = !power; /* niega el estado de power con ! */
 
         console.log(power); /*ver el estado de power */
         if (power) {
-                screen.classList.remove("basicScreen")
-                screen.classList.add("channel0") /* cambiar la clase bassicScreen, por una nueva, channel0 - encender*/
-
+                screen.classList.add("channel0"); /* cambiar la clase bassicScreen, por una nueva, channel0 - encender*/
+                info.classList.remove("hidden");
+                info.classList.add("visible"); /*cambia la clase "hidden" por "visible"*/
         } else {
-                screen.classList.remove("channel0")
-                screen.classList.add("basicScreen") /*elimina clase screenOn, cambia por bassicScreen - apagar*/
+                screen.classList.add("basicScreen"); /*elimina clase screenOn, cambia por bassicScreen - apagar*/
+                info.classList.remove("visible");
+                info.classList.add("hidden"); /* cambia la clase "visible" por "hidden"*/
         }
 });
 
-
 // Botones de canales
-const buttons = document.getElementsByClassName("button"); /* Selecciona todos los elementos con la clase "button"*/
-let arrayButtons = Array.from(buttons); /* Crear un array con los elementos de clase buttons*/
+const buttons = document.getElementsByClassName("button"); /* selecciona todos los elementos con la clase "button"*/
+let arrayButtons = Array.from(buttons); /* crea un array con los elementos de clase buttons*/
 
-arrayButtons.forEach(item => {  /* itera sobre cada elemento y agrega un event listener.*/
+arrayButtons.forEach(item => {
         item.addEventListener("click", (e) => {
-                if (power) {    /* Verifica si la TV está encendida*/
-                        screen.classList.remove(screen.classList[screen.classList.length - 1]); // Elimina la última clase del elemento con id="screen"
-                        screen.classList.add("channel" + e.target.innerHTML); // Añade la clase correspondiente al canal
+                if (power) { /* Verifica si la TV está encendida*/
+                        screen.classList.remove(screen.classList[screen.classList.length - 1]); /* elimina la última clase del elemento con id="screen" */
+                        screen.classList.add("channel" + e.target.innerHTML); /* añade la clase correspondiente al canal*/
                 }
         });
 });
+
+
 
 
 
@@ -133,22 +133,22 @@ arrayButtons.forEach(item => {  /* itera sobre cada elemento y agrega un event l
 //         // document.getElementById("channelInfo").innerHTML = contChannel;
 // }
 
-setInterval(hora, 1000);
+/* setInterval(hora, 1000);
 
 function hora(){
 
         const date = new Date().toLocaleString(); /*obtener fecha actual */
-        // const hora = date.getHours();
-        // const minutos = date.getMinutes();
-        // const segundos = date.getSeconds();
+// const hora = date.getHours();
+// const minutos = date.getMinutes();
+// const segundos = date.getSeconds();
 
-        // const time = `${hora}:${minutos < 10 ? "0" : ""}${minutos}:${segundos < 10 ? "0" : ""}${segundos}`; /*formato hora*/
+// const time = `${hora}:${minutos < 10 ? "0" : ""}${minutos}:${segundos < 10 ? "0" : ""}${segundos}`; /*formato hora*/
 
-        // document.getElementById("hora").innerHTML = time;
-        // document.getElementById("fecha").innerHTML = date;
+// document.getElementById("hora").innerHTML = time;
+// document.getElementById("fecha").innerHTML = date;
 
-        //console.log(date)
+//console.log(date)
 
-        // document.getElementById("hora").innerHTML = time; /*inserta la hora en el html*/
-        document.getElementById("fecha").innerHTML = date; /*inserta la fecha en el html*/
-}
+// document.getElementById("hora").innerHTML = time; /*inserta la hora en el html*/
+// document.getElementById("fecha").innerHTML = date; /*inserta la fecha en el html*/
+//} */
